@@ -1,0 +1,7 @@
+print("menghitung luas dan volume bola") 
+jari = 10
+phi = 3.14
+luas = int(4*phi*(jari*jari))
+volume = int(4/3*phi*(jari*jari*jari))
+print('luas bola=',luas)
+print('volume bola=',volume)
