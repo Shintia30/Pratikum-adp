@@ -1,0 +1,36 @@
+program menghitung_rata_ratq_ragam_dan_simpang_baku;
+
+var
+  tugas, kuis, uts, uas, keaktifan: Integer;
+  rata_rata, nilai_ragam, simpangan_baku: Real;
+  nama_mahasiswa, mahasiswa:String;
+
+begin
+  Write('nama_mahasiwa=',);
+  ReadLn(mahasiswa);
+
+  // Input data
+  tugas := 90;
+  WriteLn('nilai tugas=', tugas);
+  kuis := 100;
+  WriteLn('nilai kuis=', kuis);
+  uts := 85;
+  WriteLn('nilai uts=', uts);
+  uas := 80;
+  WriteLn('nilai uas=', uas);
+  keaktifan := 100;
+  WriteLn('nilai keaktifan=', keaktifan);
+
+  // Menghitung rata-rata
+  rata_rata := (tugas + kuis + uts + uas + keaktifan) / 5;
+
+  // Menghitung ragam
+  nilai_ragam := ((Sqr(tugas - rata_rata) + Sqr(kuis - rata_rata) + Sqr(uts - rata_rata) + Sqr(uas - rata_rata) + Sqr(keaktifan - rata_rata)) / 5);
+
+  // Menghitung simpangan baku
+  simpangan_baku := sqrt(nilai_ragam);
+
+  WriteLn('nilai rata-rata=', rata_rata:0:2);
+  WriteLn('nilai ragam=', nilai_ragam:0:2);
+  WriteLn('simpangan baku=', simpangan_baku:0:2);
+end.
